@@ -1,7 +1,7 @@
 :root {
   --netflix-red: #c6d23d;
   --netflix-black: #141414;
-  --netflix-dark-gray: #3e110b;
+  --netflix-dark-gray: #6c4b37;
   --text-white: #ffffff;
   --text-gray: #b3b3b3;
   --font-primary: "Outfit", sans-serif;
@@ -141,7 +141,7 @@ header.scrolled {
 
 .btn-primary {
   background-color: var(--netflix-red);
-  color: white;
+  color: #141414;
 }
 
 .btn-primary:hover {
