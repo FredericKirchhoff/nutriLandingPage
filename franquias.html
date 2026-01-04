@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Franquias Nutri Store - Clube da Nutricionista</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+          url("assets/images/banner_nutri_store.png");
+        background-size: cover;
+      }
+      .container {
+        max-width: 800px;
+        padding: 40px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        border: 1px solid var(--netflix-red);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="font-size: 3rem; margin-bottom: 20px">
+        Seja um Franqueado Nutri Store
+      </h1>
+      <p style="font-size: 1.5rem; margin-bottom: 30px">
+        Entre para o time que está revolucionando o mercado de nutrição no
+        Brasil.
+      </p>
+      <form
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          max-width: 400px;
+          margin: 0 auto;
+        "
+      >
+        <input
+          type="text"
+          placeholder="Nome Completo"
+          style="padding: 10px; border-radius: 4px; border: none"
+        />
+        <input
+          type="email"
+          placeholder="E-mail"
+          style="padding: 10px; border-radius: 4px; border: none"
+        />
+        <input
+          type="tel"
+          placeholder="Telefone / WhatsApp"
+          style="padding: 10px; border-radius: 4px; border: none"
+        />
+        <button class="btn btn-primary" style="justify-content: center">
+          Solicitar Contato
+        </button>
+      </form>
+      <a
+        href="index.html"
+        style="display: inline-block; margin-top: 20px; color: white"
+        >Voltar para Home</a
+      >
+    </div>
+  </body>
+</html>

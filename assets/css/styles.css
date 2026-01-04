@@ -1,0 +1,472 @@
+:root {
+  --netflix-red: #c6d23d;
+  --netflix-black: #141414;
+  --netflix-dark-gray: #3e110b;
+  --text-white: #ffffff;
+  --text-gray: #b3b3b3;
+  --font-primary: "Outfit", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--netflix-black);
+  color: var(--text-white);
+  font-family: var(--font-primary);
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 4%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+header.scrolled {
+  background-color: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: clamp(40px, 8vw, 72px);
+  width: auto;
+  transition: height 0.3s;
+}
+
+.logo {
+  color: var(--netflix-red);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.sub-header {
+  font-size: 0.9rem;
+  color: var(--text-white);
+  margin-left: 20px;
+  font-weight: normal;
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to top,
+      var(--netflix-black),
+      transparent 50%
+    ),
+    url("../images/banner_nutri_online.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  margin-top: 6rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #d1d1d1;
+  max-width: 90%;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.btn-container {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--netflix-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #c10811;
+}
+
+.btn-secondary {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Rows/Sections */
+.section {
+  padding: 3vw 4%;
+  position: relative;
+  z-index: 10;
+}
+
+.section-title {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #e5e5e5;
+}
+
+.content-row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.row-feature-card {
+  background-color: #333; /* Fallback */
+  height: 300px;
+  flex: 0 0 45%;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.row-feature-card:hover {
+  transform: scale(1.03);
+  z-index: 20;
+}
+
+.row-feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-info {
+  flex: 1;
+  padding: 20px;
+  background: linear-gradient(90deg, #141414 0%, transparent 100%);
+}
+
+.feature-list h3 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: var(--netflix-red);
+}
+
+.feature-list ul {
+  list-style: none;
+}
+
+.feature-list ul li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  color: #e5e5e5;
+}
+
+.feature-list ul li::before {
+  content: "✓";
+  color: var(--netflix-red);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* Pricing */
+.pricing-section {
+  padding: 50px 4%;
+  text-align: center;
+}
+
+.pricing-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  width: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s;
+  border: 1px solid #333;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  border-color: var(--text-gray);
+}
+
+.pricing-card.vip {
+  border: 2px solid var(--netflix-red); /* Highlight VIP */
+  background: #252525;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.plan-price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--netflix-red);
+}
+
+.plan-features {
+  text-align: left;
+  margin-bottom: 30px;
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.plan-features li {
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+.plan-features li::before {
+  content: "•";
+  color: var(--netflix-red);
+  margin-right: 8px;
+}
+
+.franquia-banner {
+  margin-top: 60px;
+  background: linear-gradient(45deg, #000 0%, #333 100%);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  border-left: 5px solid var(--netflix-red);
+}
+
+/* Footer */
+footer {
+  padding: 50px 4%;
+  color: var(--text-gray);
+  font-size: 0.9rem;
+  margin-top: 50px;
+  border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* --- ANIMATIONS & UX IMPROVEMENTS --- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation Utility Classes */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for children if needed */
+.delay-100 {
+  transition-delay: 0.1s;
+}
+.delay-200 {
+  transition-delay: 0.2s;
+}
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+/* Enhanced Hover Effects */
+.btn {
+  /* Existing styles preserved */
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother interaction */
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.row-feature-card {
+  /* Existing structure */
+  background-color: #333;
+  height: 300px;
+  flex: 0 0 45%;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.4s ease; /* Bouncy premium feel */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row-feature-card:hover {
+  transform: scale(1.03) translateY(-5px);
+  z-index: 20;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card {
+  /* Existing */
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  width: 300px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.4s ease;
+  border: 1px solid #333;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--netflix-red);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Initial Hero Animation State */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-title {
+  animation-delay: 0.2s;
+}
+.hero-subtitle {
+  animation-delay: 0.4s;
+}
+.hero-description {
+  animation-delay: 0.6s;
+}
+.btn-container {
+  animation-delay: 0.8s;
+}
