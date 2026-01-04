@@ -326,6 +326,9 @@ footer {
   .content-row {
     flex-direction: column;
   }
+  .content-row .feature-info {
+    order: -1;
+  }
   .hero-title {
     font-size: 2.5rem;
   }
