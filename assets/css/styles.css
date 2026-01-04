@@ -101,7 +101,7 @@ header.scrolled {
   margin-bottom: 1rem;
   line-height: 1.1;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.9), 0 4px 8px rgba(0, 0, 0, 0.8);
   letter-spacing: -1px;
 }
 
@@ -115,10 +115,10 @@ header.scrolled {
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: #d1d1d1;
+  color: #ffffff;
   max-width: 90%;
-  font-weight: 300;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .btn-container {
@@ -165,9 +165,10 @@ header.scrolled {
 }
 
 .section-title {
-  font-size: 1.5vw;
+  font-size: clamp(0.9rem, 1.3vw, 1.3rem);
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   color: #e5e5e5;
 }
 
